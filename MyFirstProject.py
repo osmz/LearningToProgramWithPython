@@ -1,3 +1,4 @@
+#Codigo extraido de: https://gist.github.com/jurandysoares/4380835
 import turtle
 
 screen = turtle.Screen()

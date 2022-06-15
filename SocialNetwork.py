@@ -26,13 +26,28 @@ age = 2022-year
 print()
 
 # Solicitamos la estatura, medida en metros. Utilizamos la conversión a 'int', y una expresión para convertir esto a una medida en metros y centí­metros
-stature = float(input("Cuentame más de ti, para agregarlo a tu perfil. ¿Cuánto mides en metros?. "))
+print("Queremos saber mas de ti, vamos a realizarte algunas preguntas.")
+print()
+stature = float(input("¿Cuánto mides en metros?: "))
 stature_m = float(stature)
 stature_cm = int(stature_m*100 )
 print()
 
+# Consultamos el género del usuario.
+gender = int(input("¿Cuál es tu género?: "))
+print()
+
+# Consultamos el número de contacto.
+number = int(input("¿Ingresa tu número de contacto?: "))
+print()
+
+# Consultamos la ciudad en donde vive el usuario.
+city = int(input("¿En qué ciudad vives?: "))
+print()
+
 # Consultamos cuántos amigos tiene el usuario.
 num_friends = int(input("Muy bien. Finalmente, cuéntame ¿cuantos amigos tienes?. "))
+print()
 
 # Con los datos recolectados escribimos en pantalla un texto que resuma los datos que hemos obtenido
 print()
@@ -41,6 +56,9 @@ print("--------------------------------------------------")
 print("Nombre:  ", name)
 print("Edad:    ", age, "años")
 print("Estatura:", stature_m, "metros o", stature_cm, "centímetros")
+print("Género:  ", gender)
+print("Número de contacto:  ", number)
+print("Ciudad:  ", city)
 print("Amigos:  ", num_friends)
 print("--------------------------------------------------")
 print("Gracias por la información. Esperamos que disfrutes de nuestra red")

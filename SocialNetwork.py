@@ -17,7 +17,7 @@ print("""
 # Solicitamos al usuario que ingrese su nombre, y lo guardamos en una variable de tipo str
 name = input("Dinos como te llamas: ")
 print()
-print("Hola ", name, ", bienvenido a Careca Networks")
+print("Hola ", name, ", bienvenido a Careca Networks.")
 print()
 
 # Solicitamos el ingreso del año, y utilizamos este dato para estimar la edad de la persona. 
@@ -34,7 +34,7 @@ stature_cm = int(stature_m*100 )
 print()
 
 # Consultamos el género del usuario.
-gender = int(input("¿Cuál es tu género?: "))
+gender = input("¿Cuál es tu género?: ")
 print()
 
 # Consultamos el número de contacto.
@@ -42,7 +42,7 @@ number = int(input("¿Ingresa tu número de contacto?: "))
 print()
 
 # Consultamos la ciudad en donde vive el usuario.
-city = int(input("¿En qué ciudad vives?: "))
+city = input("¿En qué ciudad vives?: ")
 print()
 
 # Consultamos cuántos amigos tiene el usuario.

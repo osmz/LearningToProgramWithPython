@@ -38,11 +38,11 @@ gender = input("¿Cuál es tu género?: ")
 print()
 
 # Consultamos el número de contacto.
-number = int(input("¿Ingresa tu número de contacto?: "))
+number = str(input("¿Ingresa tu número de contacto?: "))
 print()
 
 # Consultamos la ciudad en donde vive el usuario.
-city = input("¿En qué ciudad vives?: ")
+city = str(input("¿En qué ciudad vives?: "))
 print()
 
 # Consultamos cuántos amigos tiene el usuario.
@@ -61,7 +61,7 @@ print("Número de contacto:  ", number)
 print("Ciudad:  ", city)
 print("Amigos:  ", num_friends)
 print("--------------------------------------------------")
-print("Gracias por la información. Esperamos que disfrutes de nuestra red")
+print("Gracias por la información. Esperamos que disfrutes de nuestra red.")
 print()
 
 # Solicitamos un mensaje de prueba que sirva para publicar un estado del usuario.
@@ -70,3 +70,27 @@ print()
 print("--------------------------------------------------")
 print(name, "dice:", message)
 print("--------------------------------------------------")
+
+# Usaremos una variable bool para indicar si el usuario desea continuar utilizando el programa o no
+continuar = True
+
+# Este ciclo se mantiene en ejecuciónn hasta que el usuario desee salir
+while continuar:
+
+    # Solicitamos opción al usuario
+    escribir_mensaje = str(input("¿Deseas escribir un mensaje? (S/N) "))
+
+    # Si el usuario ingrese "N" o "n", termina el programa
+    if escribir_mensaje == "N" or escribir_mensaje == "n":
+        continuar = False
+    # En caso que sea otra respuesta, vamos a publicar otro mensaje
+    else:
+        menssage = input("Vamos a publicar un mensaje. ¿Qué piensas hoy? ")
+        print()
+        print("--------------------------------------------------")
+        print(name, "dice:", menssage)
+        print("--------------------------------------------------")
+
+# Mensaje de salida, una vez que el ciclo ha terminado.
+print("Gracias por usar Careca networks. ¡Hasta pronto!")
+

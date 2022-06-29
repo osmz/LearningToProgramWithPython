@@ -1,3 +1,11 @@
+# Funciones
+
+def postMessage(name, message):
+    print()
+    print("--------------------------------------------------")
+    print(name, "dice:", message)
+    print("--------------------------------------------------")
+
 # Mensaje de bienvenida al usuario
 print("Bienvenido a Mi red social... ")
 print("""
@@ -66,10 +74,7 @@ print()
 
 # Solicitamos un mensaje de prueba que sirva para publicar un estado del usuario.
 message = input("Ahora vamos a publicar tu primer mensaje. ¿Qué piensas hoy? ")
-print()
-print("--------------------------------------------------")
-print(name, "dice:", message)
-print("--------------------------------------------------")
+postMessage(name, message)
 
 ''' # Usaremos una variable bool para indicar si el usuario desea continuar utilizando el programa o no
 continuar = True
@@ -108,12 +113,9 @@ while option != 0:
     # Código para la opción 1. Publicar un mensaje.
     if option == 1:
         mensaje = input("Ahora vamos a publicar un mensaje. ¿Qué piensas hoy? ")
-        print()
-        print("--------------------------------------------------")
-        print(name, "dice:", message)
-        print("--------------------------------------------------")
+        postMessage(name, message)
 
-    #CÃ³digo para la opciÃ³n 2. Publicar un mensajes a un grupo de personas.
+    # Código para la opción 2. Publicar un mensajes a un grupo de personas.
     elif option == 2:
         message = input("Ahora vamos a publicar un mensaje a un grupo de amigos. ¿Qué quieres decirles? ")
         print()
@@ -123,7 +125,7 @@ while option != 0:
             print(name, "dice:", "@"+name_friends, message)
             print("--------------------------------------------------")
 
-    #CÃ³digo para la opciÃ³n 3. Publicar los datos del perfil del usuario.
+    # Código para la opción 3. Publicar los datos del perfil del usuario.
     elif option == 3:
         print("--------------------------------------------------")
         print("Nombre:   ", name)
@@ -132,9 +134,9 @@ while option != 0:
         print("Amigos:   ", num_friends)
         print("--------------------------------------------------")
 
-    #CÃ³digo para la opciÃ³n 4. Actualizar los datos del perfil del usuario.
+    # Código para la opción 4. Actualizar los datos del perfil del usuario.
     elif option == 4:
-        #Repetimos el cÃ³digo para solicitar datos
+        # Repetimos el código para solicitar datos
         # Solicitud de nombre
         name = input("Para empezar, dime como te llamas. ")
         print()
@@ -159,10 +161,10 @@ while option != 0:
 
         print()
         print("Muy bien,", name, ". Entonces podemos crear un perfil con estos datos.")
-        # Repetimos el cÃ³digo para mostrar los datos del usuario.
+        # Repetimos el código para mostrar los datos del usuario.
         print("--------------------------------------------------")
         print("Nombre:  ", name)
-        print("Edad:    ", age, "aÃ±os")
+        print("Edad:    ", age, "años")
         print("Estatura:", stature_m, "metros y", stature_cm, "centímetros")
         print("Amigos:  ", num_friends)
         print("--------------------------------------------------")
@@ -177,6 +179,6 @@ while option != 0:
         print("No conozco la opción que has ingresado. Inténtalo otra vez.")
 
 print()
-print("Gracias por usar Mi Red. ¡Hasta pronto!")
+print("Gracias por usar Mi red Careca Networks. ¡Hasta pronto!")
 print()
 

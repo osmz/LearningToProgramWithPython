@@ -108,10 +108,15 @@ while option != 0:
 
     # Código para la opción 4. Actualizar los datos del perfil del usuario.
     elif option == 4:
+        print()
         name = get_Name()
+        print()
         age = get_Age()
+        print()
         (stature_m, stature_cm) = get_Stature()
+        print()
         num_friends = get_Num_Friends()
+        print()
         show_Profile(name, age, stature_m, stature_cm, num_friends)
     elif option == 0:
         print("Has decidido salir.")

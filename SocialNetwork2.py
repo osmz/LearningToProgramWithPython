@@ -71,7 +71,7 @@ print("--------------------------------------------------")
 print(name, "dice:", message)
 print("--------------------------------------------------")
 
-# Usaremos una variable bool para indicar si el usuario desea continuar utilizando el programa o no
+''' # Usaremos una variable bool para indicar si el usuario desea continuar utilizando el programa o no
 continuar = True
 
 # Este ciclo se mantiene en ejecuciónn hasta que el usuario desee salir
@@ -92,5 +92,91 @@ while continuar:
         print("--------------------------------------------------")
 
 # Mensaje de salida, una vez que el ciclo ha terminado.
-print("Gracias por usar Careca networks. ¡Hasta pronto!")
+print("Gracias por usar Careca networks. ¡Hasta pronto!") '''
+
+# Esta opcion permite entrar al ciclo. Solo interesa que no sea 0.
+option = 1
+while option != 0:
+    print("Acciones disponibles:")
+    print("  1. Escribir un mensaje público")
+    print("  2. Escribir un mensaje solo a algunos amigos")
+    print("  3. Mostrar los datos de perfil")
+    print("  4. Actualizar el perfil de usuario")
+    print("  0. Salir")
+    option = int(input("Ingresa una opción: "))
+
+    # Código para la opción 1. Publicar un mensaje.
+    if option == 1:
+        mensaje = input("Ahora vamos a publicar un mensaje. ¿Qué piensas hoy? ")
+        print()
+        print("--------------------------------------------------")
+        print(name, "dice:", message)
+        print("--------------------------------------------------")
+
+    #CÃ³digo para la opciÃ³n 2. Publicar un mensajes a un grupo de personas.
+    elif option == 2:
+        message = input("Ahora vamos a publicar un mensaje a un grupo de amigos. ¿Qué quieres decirles? ")
+        print()
+        for i in range(num_friends):
+            name_friends = input("Ingresa el nombre de tu amigo o amiga: ")
+            print("--------------------------------------------------")
+            print(name, "dice:", "@"+name_friends, message)
+            print("--------------------------------------------------")
+
+    #CÃ³digo para la opciÃ³n 3. Publicar los datos del perfil del usuario.
+    elif option == 3:
+        print("--------------------------------------------------")
+        print("Nombre:   ", name)
+        print("Edad:     ", age, "años")
+        print("Estatura: ", stature_m, "m o ", stature_cm, "centímetros")
+        print("Amigos:   ", num_friends)
+        print("--------------------------------------------------")
+
+    #CÃ³digo para la opciÃ³n 4. Actualizar los datos del perfil del usuario.
+    elif option == 4:
+        #Repetimos el cÃ³digo para solicitar datos
+        # Solicitud de nombre
+        name = input("Para empezar, dime como te llamas. ")
+        print()
+        print("Hola ", name, ", bienvenido a Mi Red")
+        print()
+
+        # Cálculo de edad
+        year = int(input("Para preparar tu perfil, dime en que año naciste. "))
+        age = 2022-year
+        print()
+
+        # Cálculo de estatura
+        print("Queremos saber mas de ti, vamos a realizarte algunas preguntas.")
+        print()
+        stature = float(input("¿Cuánto mides en metros?: "))
+        stature_m = float(stature)
+        stature_cm = int(stature_m*100 )
+        print()
+
+        # Cantidad de amigos
+        num_friends = int(input("Muy bien. Finalmente, cuéntame cuantos amigos tienes. "))
+
+        print()
+        print("Muy bien,", name, ". Entonces podemos crear un perfil con estos datos.")
+        # Repetimos el cÃ³digo para mostrar los datos del usuario.
+        print("--------------------------------------------------")
+        print("Nombre:  ", name)
+        print("Edad:    ", age, "aÃ±os")
+        print("Estatura:", stature_m, "metros y", stature_cm, "centímetros")
+        print("Amigos:  ", num_friends)
+        print("--------------------------------------------------")
+        print()
+
+    # Código para la opción 0. Salir.
+    elif option == 0:
+        print("Has decidido salir.")
+
+    # Código para la opción que no coincida con ninguna anterior.
+    else:
+        print("No conozco la opción que has ingresado. Inténtalo otra vez.")
+
+print()
+print("Gracias por usar Mi Red. ¡Hasta pronto!")
+print()
 

@@ -73,13 +73,17 @@ print(intercalar('CARLOS', 'oscar')) '''
 
 print(ocurrencias('11001100110')) '''
 
-def remover_enesimo(s, n):
-    s_1 = list(s)
-    del s_1[n]
-    s_1 = "".join(s_1)
-    return s_1
+''' def remover_enesimo(s, n):
+    s = list(s)
+    if n >= len(s) or n < 0:
+        s = "".join(s)
+        return s
+    else:
+        del s[n]
+        s = "".join(s)
+        return s
 
-print(remover_enesimo('Metodos', 0))
+print(remover_enesimo('Metodos', 7)) '''
 
 ''' def reemplazo(string):
     indice = 0

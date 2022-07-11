@@ -1,3 +1,4 @@
+import os
 # Funciones
 def show_Welcome():
     print("Bienvenido a Mi red social... ")
@@ -37,6 +38,13 @@ def get_Num_Friends():
     num_friends = int(input("Cuéntame ¿cuantos amigos tienes?: "))
     return num_friends
 
+def get_Data():
+    n = get_Name()
+    e = get_Age()
+    (em, ec) = get_Stature()
+    na = get_Num_Friends()
+    return (n, e, em, ec, na)
+
 def show_Profile(name, age, stature_m, stature_cm, num_friends, country):
     print("--------------------------------------------------")
     print("Nombre:   ", name)
@@ -70,3 +78,31 @@ def show_Message(origin, addressee, message):
     else:
         print(origin, "dice:", "@"+addressee, message)
     print("--------------------------------------------------")
+
+def file_exists(ruta):
+    return os.path.isfile(ruta)
+
+def read_Username(name):
+    archivo_usuario = open(name+".user","r")
+    name = archivo_usuario.readline()
+    age = int(archivo_usuario.readline())
+    stature = float(archivo_usuario.readline())
+    stature_m = float(stature)
+    stature_cm = int(stature_m*100)
+    country = archivo_usuario.readline()
+    num_friends = int(archivo_usuario.readline())
+    message = archivo_usuario.readline()
+    # Una vez que hemos leido los datos del usuario no debemos olvidar cerrar el archivo
+    archivo_usuario.close()
+    return(name, age, stature_m, stature_cm, country, num_friends, message)
+
+def write_Username(name, age, stature_m, country, num_friends, message):
+    archivo_usuario = open(name+".user","w")
+    archivo_usuario.write(name+"\n")
+    archivo_usuario.write(str(age)+"\n")
+    archivo_usuario.write(str(stature_m)+"\n")
+    archivo_usuario.write(country+"\n")
+    archivo_usuario.write(str(num_friends)+"\n")
+    archivo_usuario.write(message+"\n")
+    # Una vez que hemos escrito todos los datos del usuario en el archivo, no debemos olvidar cerrarlo
+    archivo_usuario.close()

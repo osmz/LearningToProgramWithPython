@@ -29,16 +29,21 @@ def get_Stature():
     stature_cm = int(stature_m*100 )
     return (stature_m, stature_cm)
 
+def get_Country():
+    country = input("Dinos de que pais eres: ")
+    return country
+
 def get_Num_Friends():
     num_friends = int(input("Cuéntame ¿cuantos amigos tienes?: "))
     return num_friends
 
-def show_Profile(name, age, stature_m, stature_cm, num_friends):
+def show_Profile(name, age, stature_m, stature_cm, num_friends, country):
     print("--------------------------------------------------")
     print("Nombre:   ", name)
     print("Edad:     ", age, "años")
     print("Estatura: ", stature_m, "m o ", stature_cm, "centímetros")
     print("Amigos:   ", num_friends)
+    print("Pais:     ", country)
     print("--------------------------------------------------")
 
 def option_Menu():

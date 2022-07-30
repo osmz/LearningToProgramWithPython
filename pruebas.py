@@ -145,3 +145,47 @@ print(remover_enesimo('Metodos', 7)) '''
 
 print(reemplazo('Esta Es unA pruebA')) '''
 
+lista = [1, 22, 79, 64, 84, 7, 1, 39, 41, 19, 69]
+
+def promedio_std(lista):
+    x = 0
+    y = 0
+    x = sum(lista) / len(lista)
+    total = 0.0
+    for i in lista:
+        total += round((i - x) ** 2,3)
+    y = total / (len(lista))
+    y= round(y**(1/2),3)
+    return x,y
+
+print(promedio_std(lista))
+
+''' lista = ["azul","rojo","verde","verde","verde","rojo","verde","verde","azul","amarillo","azul","azul","verde","verde","verde","amarillo","amarillo"]
+
+def  color_frecuente(lista):
+    lista2 = ["azul", "rojo", "verde", "amarillo"]
+    nueva_lista = []
+    for i in lista2:
+        cantidad = 0
+        for j in lista:
+            if i == j:
+               cantidad = cantidad + 1
+        nueva_lista.append([cantidad, i])
+
+    az = nueva_lista.pop(0)
+    rj = nueva_lista.pop(0)
+    vr = nueva_lista.pop(0)
+    am = nueva_lista.pop(0)
+
+    if ((az[0]>=rj[0])and(az[0]>=vr[0])and(az[0]>=am[0])):
+        return (az[1],az[0])
+    elif ((rj[0]>az[0])and(rj[0]>=vr[0])and(rj[0]>=am[0])):
+        return (rj[1],rj[0])
+    elif ((vr[0]>az[0]) and (vr[0]>rj[0]) and (vr[0]>=am[0])):
+        return (vr[1], vr[0])
+    elif ((am[0]>az[0])and(am[0]>rj[0])and(am[0]>vr[0])):
+        return (am[1],am[0])
+
+print(color_frecuente(lista)) '''
+
+

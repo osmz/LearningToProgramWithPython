@@ -1,5 +1,5 @@
 import os
-# Funciones
+# functions
 def show_Welcome():
     print("Bienvenido a Mi red social... ")
     print("""
